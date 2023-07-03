@@ -14,7 +14,7 @@ const nextConfig = {
       "d2vwwcvoksz7ty.cloudfront.net",
       "lh3.googleusercontent.com",
       "media.cleanshot.cloud", // only for staging purposes
-      "uploads-ssl.webflow.com"
+      "web-apsoutheast2-static.shopmy.com.au"
     ],
   },
   async headers() {
