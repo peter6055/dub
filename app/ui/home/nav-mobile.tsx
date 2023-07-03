@@ -74,7 +74,7 @@ export default function MobileNav() {
           <Link
             href={
               process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                ? "https://app.dub.sh/login"
+                ? "https://internal-short.shopmy.com.au/login"
                 : "http://app.localhost:3000/login"
             }
             className="flex w-full font-semibold capitalize"
@@ -88,7 +88,7 @@ export default function MobileNav() {
           <Link
             href={
               process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                ? "https://app.dub.sh/register"
+                ? "https://internal-short.shopmy.com.au/register"
                 : "http://app.localhost:3000/register"
             }
             className="flex w-full font-semibold capitalize"

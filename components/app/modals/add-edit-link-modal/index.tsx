@@ -187,7 +187,7 @@ function AddEditLinkModal({
       // otherwise, get the favicon of the URL
     } else {
       return `${GOOGLE_FAVICON_URL}${getApexDomain(
-        debouncedUrl || props?.url || "https://dub.sh",
+        debouncedUrl || props?.url || "https://internal-short.shopmy.com.au",
       )}`;
     }
   }, [password, debouncedUrl, props]);

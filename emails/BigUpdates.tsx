@@ -89,7 +89,7 @@ export default function BigUpdates({ slug }): JSX.Element {
               {slug ? (
                 <MjmlText cssClass="paragraph">
                   <a
-                    href={`https://app.dub.sh/${slug}/settings/billing`}
+                    href={`https://internal-short.shopmy.com.au/${slug}/settings/billing`}
                     target="_blank"
                   >
                     Upgrade to Pro

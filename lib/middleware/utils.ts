@@ -4,20 +4,20 @@ import { isHomeHostname } from "../utils";
 export const parse = (req: NextRequest) => {
   let domain = req.headers.get("host") as string;
   domain = domain.replace("www.", ""); // remove www. from domain
-  if (isHomeHostname(domain)) domain = "dub.sh"; // if domain is a home hostname, set it to dub.sh
+  if (isHomeHostname(domain)) domain = "internal-short.shopmy.com.au"; // if domain is a home hostname, set it to internal-short.shopmy.com.au
 
-  // path is the path of the URL (e.g. dub.sh/stats/github -> /stats/github)
+  // path is the path of the URL (e.g. internal-short.shopmy.com.au/stats/github -> /stats/github)
   const path = req.nextUrl.pathname;
 
   // Here, we are using decodeURIComponent to handle foreign languages like Hebrew
-  const key = decodeURIComponent(path.split("/")[1]); // key is the first part of the path (e.g. dub.sh/stats/github -> stats)
-  const fullKey = decodeURIComponent(path.slice(1)); // fullKey is the full path without the first slash (to account for multi-level subpaths, e.g. dub.sh/github/repo -> github/repo)
+  const key = decodeURIComponent(path.split("/")[1]); // key is the first part of the path (e.g. internal-short.shopmy.com.au/stats/github -> stats)
+  const fullKey = decodeURIComponent(path.slice(1)); // fullKey is the full path without the first slash (to account for multi-level subpaths, e.g. internal-short.shopmy.com.au/github/repo -> github/repo)
 
   return { domain, path, key, fullKey };
 };
 
 export const getFinalUrl = (target: string, { req }: { req: NextRequest }) => {
-  // query is the query string (e.g. dub.sh/github/repo?utm_source=twitter -> ?utm_source=twitter)
+  // query is the query string (e.g. internal-short.shopmy.com.au/github/repo?utm_source=twitter -> ?utm_source=twitter)
   const searchParams = req.nextUrl.searchParams;
 
   // get the query params of the target url

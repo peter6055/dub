@@ -4,7 +4,7 @@ import { FAVICON_FOLDER } from "#/lib/constants";
 export default function Meta({
   title = "Dub - Link Management for Modern Marketing Teams",
   description = "Dub is an open-source link management tool for modern marketing teams to create, share, and track short links.",
-  image = "https://dub.sh/_static/thumbnail.png",
+  image = "https://internal-short.shopmy.com.au/_static/thumbnail.png",
 }: {
   title?: string;
   description?: string;
@@ -47,7 +47,7 @@ export default function Meta({
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta itemProp="image" content={image} />
-      <meta property="og:logo" content="https://dub.sh/_static/logo.png"></meta>
+      <meta property="og:logo" content="https://internal-short.shopmy.com.au/_static/logo.png"></meta>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />

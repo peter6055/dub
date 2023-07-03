@@ -62,7 +62,7 @@ export default function Nav() {
             <Link
               href={
                 process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                  ? "https://app.dub.sh/login"
+                  ? "https://internal-short.shopmy.com.au/login"
                   : "http://app.localhost:3000/login"
               }
               className="rounded-md text-sm font-medium text-gray-500 transition-colors ease-out hover:text-black"
@@ -72,7 +72,7 @@ export default function Nav() {
             <Link
               href={
                 process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                  ? "https://app.dub.sh/register"
+                  ? "https://internal-short.shopmy.com.au/register"
                   : "http://app.localhost:3000/register"
               }
               className="rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"

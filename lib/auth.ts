@@ -183,8 +183,8 @@ interface WithLinksAuthNextApiHandler {
   Here's an outline of the flow:
   1. Check if user is logged in, if not, return 401 right away.
   2. Check if there's a `slug` in the query params:
-    a. If there is no slug, it means that it's the generic dub.sh links
-      i. Make sure the domain is `dub.sh` (prevent query injection)
+    a. If there is no slug, it means that it's the generic internal-short.shopmy.com.au links
+      i. Make sure the domain is `internal-short.shopmy.com.au` (prevent query injection)
       ii. If link `key` is provided, make sure user is the owner of the link
     b. If there is a slug, it means that it's a custom project
       i. Make sure the project exists
@@ -230,13 +230,13 @@ const withLinksAuth =
     let project: ProjectProps | undefined;
     let link: LinkProps | undefined;
 
-    // if there is no slug, it's the default dub.sh link
+    // if there is no slug, it's the default internal-short.shopmy.com.au link
     if (!slug) {
       // prevent domain from being query injected by
-      // making sure that all instances of `domain` are `dub.sh`
+      // making sure that all instances of `domain` are `internal-short.shopmy.com.au`
       if (
-        (domain && domain !== "dub.sh") ||
-        (req.body.domain && req.body.domain !== "dub.sh")
+        (domain && domain !== "internal-short.shopmy.com.au") ||
+        (req.body.domain && req.body.domain !== "internal-short.shopmy.com.au")
       ) {
         return res.status(403).end("Unauthorized: Invalid domain.");
       }
@@ -301,7 +301,7 @@ const withLinksAuth =
       }
     }
 
-    // if key is defined, check if the  current user is the owner of the link (only for dub.sh links)
+    // if key is defined, check if the  current user is the owner of the link (only for internal-short.shopmy.com.au links)
     const { key } = req.query;
     if (key && !domain && !skipKeyCheck) {
       if (typeof key !== "string") {
@@ -311,7 +311,7 @@ const withLinksAuth =
         (await prisma.link.findUnique({
           where: {
             domain_key: {
-              domain: domain || "dub.sh",
+              domain: domain || "internal-short.shopmy.com.au",
               key,
             },
           },
@@ -319,7 +319,7 @@ const withLinksAuth =
       if (!link) {
         return res.status(404).end("Link not found.");
 
-        // for dub.sh links, check if the user is the owner of the link
+        // for internal-short.shopmy.com.au links, check if the user is the owner of the link
       } else if (!slug && link.userId !== session.user.id) {
         return res.status(404).end("Link not found.");
       }

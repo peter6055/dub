@@ -138,10 +138,10 @@ export async function getRandomKey(domain: string): Promise<string> {
 
 export async function checkIfKeyExists(domain: string, key: string) {
   if (
-    domain === "dub.sh" &&
+    domain === "internal-short.shopmy.com.au" &&
     ((await isReservedKey(key)) || DEFAULT_REDIRECTS[key])
   ) {
-    return true; // reserved keys for dub.sh
+    return true; // reserved keys for internal-short.shopmy.com.au
   }
   const link = await prisma.link.findUnique({
     where: {
@@ -380,12 +380,12 @@ export async function archiveLink(
   });
 }
 
-/* Delete all dub.sh links associated with a user when it's deleted */
+/* Delete all internal-short.shopmy.com.au links associated with a user when it's deleted */
 export async function deleteUserLinks(userId: string) {
   const links = await prisma.link.findMany({
     where: {
       userId,
-      domain: "dub.sh",
+      domain: "internal-short.shopmy.com.au",
     },
     select: {
       key: true,
@@ -394,7 +394,7 @@ export async function deleteUserLinks(userId: string) {
   });
   const pipeline = redis.pipeline();
   links.forEach(({ key }) => {
-    pipeline.del(`dub.sh:${key}`);
+    pipeline.del(`internal-short.shopmy.com.au:${key}`);
   });
   const [deleteRedis, deleteCloudinary, deletePrisma] =
     await Promise.allSettled([
@@ -402,7 +402,7 @@ export async function deleteUserLinks(userId: string) {
       // remove all images from cloudinary
       ...links.map(({ key, proxy }) =>
         proxy
-          ? cloudinary.v2.uploader.destroy(`dub.sh/${key}`, {
+          ? cloudinary.v2.uploader.destroy(`internal-short.shopmy.com.au/${key}`, {
               invalidate: true,
             })
           : Promise.resolve(),
@@ -410,7 +410,7 @@ export async function deleteUserLinks(userId: string) {
       prisma.link.deleteMany({
         where: {
           userId,
-          domain: "dub.sh",
+          domain: "internal-short.shopmy.com.au",
         },
       }),
     ]);

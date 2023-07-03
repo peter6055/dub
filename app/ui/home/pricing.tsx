@@ -254,7 +254,7 @@ const Pricing = () => {
                 <Link
                   href={
                     process.env.NODE_ENV === "production"
-                      ? "https://app.dub.sh/register"
+                      ? "https://internal-short.shopmy.com.au/register"
                       : "http://app.localhost:3000/register"
                   }
                   className={`${

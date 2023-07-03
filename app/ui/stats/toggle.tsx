@@ -79,7 +79,7 @@ export default function Toggle() {
                           cta={
                             projectSlug ? "Upgrade to Pro" : "Create Project"
                           }
-                          href="https://app.dub.sh"
+                          href="https://internal-short.shopmy.com.au"
                         />
                       }
                     >

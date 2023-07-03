@@ -36,7 +36,7 @@ export function UsageExceeded() {
 export function FeedbackEmail() {
   return (
     <FeedbackEmailChild
-      email="steven@dub.sh"
+      email="steven@internal-short.shopmy.com.au"
       feedback="This is a 
 test feedback email"
     />

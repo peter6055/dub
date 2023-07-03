@@ -98,7 +98,7 @@ export default function AppLayout({
                       }
                       className="text-sm font-medium"
                     >
-                      {domain || "dub.sh"}/{key}
+                      {domain || "internal-short.shopmy.com.au"}/{key}
                     </Link>
                   </>
                 )}

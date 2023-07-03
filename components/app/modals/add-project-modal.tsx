@@ -91,7 +91,7 @@ function AddProjectModalHelper({
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 py-4 pt-8 sm:px-16">
           <BlurImage
             src={`/_static/logo.png`}
-            alt={"dub.sh"}
+            alt={"internal-short.shopmy.com.au"}
             className="h-10 w-10 rounded-full border border-gray-200"
             width={20}
             height={20}
@@ -173,7 +173,7 @@ function AddProjectModalHelper({
             </label>
             <div className="relative mt-1 flex rounded-md shadow-sm">
               <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-5 text-gray-500 sm:text-sm">
-                app.dub.sh
+                internal-short.shopmy.com.au
               </span>
               <input
                 name="slug"
@@ -231,7 +231,7 @@ function AddProjectModalHelper({
                     ? "border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
                     : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
                 } block w-full rounded-md pr-10 focus:outline-none sm:text-sm`}
-                placeholder="dub.sh"
+                placeholder="internal-short.shopmy.com.au"
                 value={domain}
                 onChange={(e) => {
                   setDomainError(null);
@@ -254,7 +254,7 @@ function AddProjectModalHelper({
                   Domain is already in use.{" "}
                   <a
                     className="underline"
-                    href="mailto:steven@dub.sh?subject=My Domain Is Already In Use"
+                    href="mailto:steven@internal-short.shopmy.com.au?subject=My Domain Is Already In Use"
                   >
                     Contact us
                   </a>{" "}

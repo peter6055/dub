@@ -42,7 +42,7 @@ const featureList = [
       "Dub offers free custom domains on all plans - start personalizing your links today.",
     cta: (
       <a
-        href="https://app.dub.sh"
+        href="https://internal-short.shopmy.com.au"
         target="_blank"
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
@@ -87,7 +87,7 @@ const featureList = [
       "With Dub, you can invite unlimited team members to collaborate on your project for free - no more sharing logins via Google groups.",
     cta: (
       <a
-        href="https://app.dub.sh"
+        href="https://internal-short.shopmy.com.au"
         target="_blank"
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"

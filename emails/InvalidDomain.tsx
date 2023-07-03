@@ -45,7 +45,7 @@ export default function InvalidDomain({
                   </a>
                 </code>{" "}
                 for your Dub project{" "}
-                <a href={`https://app.dub.sh/${projectSlug}`} target="_blank">
+                <a href={`https://internal-short.shopmy.com.au/${projectSlug}`} target="_blank">
                   {projectSlug}↗
                 </a>{" "}
                 has been invalid for {invalidDays} days.
@@ -56,13 +56,13 @@ export default function InvalidDomain({
                 configure your domain.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/${projectSlug}/domains`}
+                link={`https://internal-short.shopmy.com.au/${projectSlug}/domains`}
                 uiText="Configure my domain"
               />
               <MjmlText cssClass="paragraph">
                 If you do not want to keep this domain on Dub, you can{" "}
                 <a
-                  href={`https://app.dub.sh/${projectSlug}/domains`}
+                  href={`https://internal-short.shopmy.com.au/${projectSlug}/domains`}
                   target="_blank"
                 >
                   delete it

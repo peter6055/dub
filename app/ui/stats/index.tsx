@@ -1,8 +1,8 @@
 "use client";
 /* 
   This Stats component lives in 3 different places:
-  1. Project link page, e.g. app.dub.sh/dub/dub.sh/github
-  2. Generic Dub.sh link page, e.g. app.dub.sh/links/steven
+  1. Project link page, e.g. internal-short.shopmy.com.au/dub/dub.sh/github
+  2. Generic Dub.sh link page, e.g. internal-short.shopmy.com.au/links/steven
   3. Public stats page, e.g. dub.sh/stats/github, stey.me/stats/weathergpt
 
   We use the `useEndpoint()` hook to get the correct layout
@@ -78,7 +78,7 @@ export default function Stats({
       : "";
 
   const { basePath, domain, endpoint } = useMemo(() => {
-    // Project link page, e.g. app.dub.sh/dub/dub.sh/github
+    // Project link page, e.g. internal-short.shopmy.com.au/dub/dub.sh/github
     if (slug && domainSlug && key) {
       return {
         basePath: `/${slug}/${domainSlug}/${encodeURIComponent(key)}`,
@@ -86,7 +86,7 @@ export default function Stats({
         endpoint: `/api/links/${encodeURIComponent(key)}/stats`,
       };
 
-      // Generic Dub.sh link page, e.g. app.dub.sh/links/steven
+      // Generic Dub.sh link page, e.g. internal-short.shopmy.com.au/links/steven
     } else if (key && pathname?.startsWith("/links")) {
       return {
         basePath: `/links/${encodeURIComponent(key)}`,

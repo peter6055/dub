@@ -55,7 +55,7 @@ export default function MayRecap({
               <MjmlText cssClass="paragraph">
                 {slug ? (
                   <a
-                    href={`https://app.dub.sh/${slug}/settings/people`}
+                    href={`https://internal-short.shopmy.com.au/${slug}/settings/people`}
                     target="_blank"
                   >
                     Start inviting your team →

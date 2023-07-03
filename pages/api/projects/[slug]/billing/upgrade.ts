@@ -11,12 +11,12 @@ export default withProjectAuth(async (req, res, project, session) => {
       billing_address_collection: "required",
       success_url: `${
         process.env.VERCEL === "1"
-          ? "https://app.dub.sh"
+          ? "https://internal-short.shopmy.com.au"
           : "http://app.localhost:3000"
       }/${slug}/settings/billing?success=true`,
       cancel_url: `${
         process.env.VERCEL === "1"
-          ? "https://app.dub.sh"
+          ? "https://internal-short.shopmy.com.au"
           : "http://app.localhost:3000"
       }/${slug}/settings/billing`,
       line_items: [{ price: priceId, quantity: 1 }],

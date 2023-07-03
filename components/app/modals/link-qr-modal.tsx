@@ -69,7 +69,7 @@ function LinkQRModalHelper({
     () => ({
       value: linkConstructor({
         key: props.key,
-        domain: props.domain || "dub.sh",
+        domain: props.domain || "internal-short.shopmy.com.au",
       }),
       bgColor: "#ffffff",
       fgColor,
@@ -225,7 +225,7 @@ function AdvancedSettings({ qrData, setFgColor, showLogo, setShowLogo }) {
                   thumbDimensions="w-5 h-5"
                   thumbTranslate="translate-x-6"
                 />
-                <p className="text-sm text-gray-600">Show Dub.sh Logo</p>
+                <p className="text-sm text-gray-600">Show internal-short.shopmy.com.au Logo</p>
               </div>
             ) : (
               <Tooltip
@@ -246,7 +246,7 @@ function AdvancedSettings({ qrData, setFgColor, showLogo, setShowLogo }) {
                     thumbTranslate="translate-x-6"
                     disabled={true}
                   />
-                  <p className="text-sm text-gray-600">Show Dub.sh Logo</p>
+                  <p className="text-sm text-gray-600">Show internal-short.shopmy.com.au Logo</p>
                 </div>
               </Tooltip>
             )}
@@ -309,7 +309,7 @@ function QrDropdown({ download, qrData, showLogo, logo }) {
                     ...(showLogo && {
                       imageSettings: {
                         ...qrData.imageSettings,
-                        src: logo || "https://dub.sh/_static/logo.svg",
+                        src: logo || "https://internal-short.shopmy.com.au/_static/logo.svg",
                       },
                     }),
                   }),

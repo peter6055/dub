@@ -53,11 +53,11 @@ export default withLinksAuth(
           {
             ...req.body,
             key,
-            domain: req.body.domain || "dub.sh",
+            domain: req.body.domain || "internal-short.shopmy.com.au",
             userId: session.user.id,
           },
           {
-            oldDomain: oldDomain || "dub.sh",
+            oldDomain: oldDomain || "internal-short.shopmy.com.au",
             oldKey,
           },
         ),
@@ -75,7 +75,7 @@ export default withLinksAuth(
         await log(
           `*${
             session.user.email
-          }* edited a link (dub.sh/${key}) to the ${url} ${
+          }* edited a link (internal-short.shopmy.com.au/${key}) to the ${url} ${
             invalidFavicon
               ? " but it has an invalid favicon :thinking_face:"
               : ""
@@ -88,7 +88,7 @@ export default withLinksAuth(
 
       // DELETE /api/links/:key – delete a link
     } else if (req.method === "DELETE") {
-      const response = await deleteLink(domain || "dub.sh", oldKey);
+      const response = await deleteLink(domain || "internal-short.shopmy.com.au", oldKey);
       return res.status(200).json(response);
     } else {
       res.setHeader("Allow", ["GET", "PUT", "DELETE"]);

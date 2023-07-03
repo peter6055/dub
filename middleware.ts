@@ -27,27 +27,27 @@ export const config = {
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { domain, path, key } = parse(req);
 
-  // for App (e.g. app.dub.sh)
+  // for App (e.g. internal-short.shopmy.com.au)
   if (APP_HOSTNAMES.has(domain)) {
     return AppMiddleware(req);
   }
 
-  // for API (api.dub.sh and api.localhost:3000)
-  if (domain === "api.dub.sh" || domain === "api.localhost:3000") {
+  // for API (api.internal-short.shopmy.com.au and api.localhost:3000)
+  if (domain === "api.internal-short.shopmy.com.au" || domain === "api.localhost:3000") {
     return ApiMiddleware(req);
   }
 
-  // for public stats pages (e.g. dub.sh/stats/github)
+  // for public stats pages (e.g. internal-short.shopmy.com.au/stats/github)
   if (key === "stats") {
     return NextResponse.rewrite(new URL(`/${domain}${path}`, req.url));
   }
 
-  // for root pages (e.g. dub.sh, vercel.fyi, etc.)
+  // for root pages (e.g. internal-short.shopmy.com.au, vercel.fyi, etc.)
   if (key.length === 0) {
     return RootMiddleware(req, ev);
   }
 
-  if (domain === "dub.sh") {
+  if (domain === "internal-short.shopmy.com.au") {
     if (DEFAULT_REDIRECTS[key]) {
       return NextResponse.redirect(DEFAULT_REDIRECTS[key]);
     }

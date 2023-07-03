@@ -13,7 +13,7 @@ import { get } from "@vercel/edge-config";
 export function constructMetadata({
   title = "Dub - Link Management for Modern Marketing Teams",
   description = "Dub is an open-source link management tool for modern marketing teams to create, share, and track short links.",
-  image = "https://dub.sh/_static/thumbnail.png",
+  image = "https://internal-short.shopmy.com.au/_static/thumbnail.png",
 }: {
   title?: string;
   description?: string;
@@ -39,7 +39,7 @@ export function constructMetadata({
       creator: "@dubdotsh",
     },
     icons: "/favicon.ico",
-    metadataBase: new URL("https://dub.sh"),
+    metadataBase: new URL("https://internal-short.shopmy.com.au"),
     themeColor: "#FFF",
   };
 }
@@ -113,7 +113,7 @@ export const chunk = <T>(array: T[], chunk_size: number): T[][] => {
 
 export function linkConstructor({
   key,
-  domain = "dub.sh",
+  domain = "internal-short.shopmy.com.au",
   localhost,
   pretty,
   noDomain,
@@ -240,7 +240,7 @@ export const getApexDomain = (url: string) => {
     // otherwise, it's a subdomain (e.g. dub.vercel.app), so we return the last 2 parts
     return parts.slice(-2).join(".");
   }
-  // if it's a normal domain (e.g. dub.sh), we return the domain
+  // if it's a normal domain (e.g. internal-short.shopmy.com.au), we return the domain
   return domain;
 };
 
@@ -259,7 +259,7 @@ export const isHomeHostname = (domain: string) => {
 
 export const getDomain = (headers: Headers) => {
   let domain = headers.get("host") as string;
-  if (isHomeHostname(domain)) domain = "dub.sh";
+  if (isHomeHostname(domain)) domain = "internal-short.shopmy.com.au";
   return domain;
 };
 

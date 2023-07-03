@@ -43,7 +43,7 @@ export default function DomainDeleted({
                   </a>
                 </code>{" "}
                 for your Dub project{" "}
-                <a href={`https://app.dub.sh/${projectSlug}`} target="_blank">
+                <a href={`https://internal-short.shopmy.com.au/${projectSlug}`} target="_blank">
                   {projectSlug}↗
                 </a>{" "}
                 has been invalid for 30 days. As a result, it has been deleted
@@ -54,7 +54,7 @@ export default function DomainDeleted({
                 it again on Dub with the link below.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/${projectSlug}/domains`}
+                link={`https://internal-short.shopmy.com.au/${projectSlug}/domains`}
                 uiText="Add a domain"
               />
               <MjmlText cssClass="paragraph">

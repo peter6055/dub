@@ -52,7 +52,7 @@ const Demo = () => {
                 title="Maximum number of links reached. Swipe to delete existing links or
               create a free account."
                 cta="Start For Free"
-                href="https://app.dub.sh/register"
+                href="https://internal-short.shopmy.com.au/register"
               />
             }
           >
@@ -137,7 +137,7 @@ const Demo = () => {
         >
           Note: Public links will be automatically-deleted after 30 minutes.{" "}
           <a
-            href="https://app.dub.sh/register"
+            href="https://internal-short.shopmy.com.au/register"
             target="_blank"
             rel="noreferrer"
             className="font-medium text-gray-700 underline transition-all hover:text-black"

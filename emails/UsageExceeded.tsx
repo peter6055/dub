@@ -47,7 +47,7 @@ export default function UsageExceeded({
                 their stats, edit them, or add more links.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/${slug}/settings/billing`}
+                link={`https://internal-short.shopmy.com.au/${slug}/settings/billing`}
                 uiText="Upgrade my plan"
               />
               <MjmlText cssClass="paragraph">

@@ -66,7 +66,7 @@ export const addDomainToVercel = async (
   domain: string,
 ): Promise<CustomResponse> => {
   return await fetch(
-    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains?teamId=${process.env.TEAM_ID_VERCEL}`,
+    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains`,
     {
       body: `{\n  "name": "${domain}"\n}`,
       headers: {
@@ -98,7 +98,7 @@ export const removeDomainFromVercel = async (domain: string) => {
     // the apex domain is being used by other domains
     // so we should only remove it from our Vercel project
     return await fetch(
-      `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}?teamId=${process.env.TEAM_ID_VERCEL}`,
+      `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.AUTH_BEARER_TOKEN}`,
@@ -110,7 +110,7 @@ export const removeDomainFromVercel = async (domain: string) => {
     // this is the only domain using this apex domain
     // so we can remove it entirely from our Vercel team
     return await fetch(
-      `https://api.vercel.com/v6/domains/${domain}?teamId=${process.env.TEAM_ID_VERCEL}`,
+      `https://api.vercel.com/v6/domains/${domain}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.AUTH_BEARER_TOKEN}`,
@@ -123,7 +123,7 @@ export const removeDomainFromVercel = async (domain: string) => {
 
 export const getDomainResponse = async (domain: string) => {
   return await fetch(
-    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}?teamId=${process.env.TEAM_ID_VERCEL}`,
+    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}`,
     {
       method: "GET",
       headers: {
@@ -138,7 +138,7 @@ export const getDomainResponse = async (domain: string) => {
 
 export const getConfigResponse = async (domain: string) => {
   return await fetch(
-    `https://api.vercel.com/v6/domains/${domain}/config?teamId=${process.env.TEAM_ID_VERCEL}`,
+    `https://api.vercel.com/v6/domains/${domain}/config`,
     {
       method: "GET",
       headers: {
@@ -151,7 +151,7 @@ export const getConfigResponse = async (domain: string) => {
 
 export const verifyDomain = async (domain: string) => {
   return await fetch(
-    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}/verify?teamId=${process.env.TEAM_ID_VERCEL}`,
+    `https://api.vercel.com/v9/projects/${process.env.PROJECT_ID_VERCEL}/domains/${domain}/verify}`,
     {
       method: "POST",
       headers: {

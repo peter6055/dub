@@ -15,7 +15,7 @@ export const authOptions: NextAuthOptions = {
     EmailProvider({
       sendVerificationRequest({ identifier, url }) {
         sendMail({
-          subject: "Your Dub.sh Login Link",
+          subject: "Your internal-short.shopmy.com.au Login Link",
           to: identifier,
           component: <LoginLink url={url} />,
         });
@@ -37,7 +37,7 @@ export const authOptions: NextAuthOptions = {
         sameSite: "lax",
         path: "/",
         // When working on localhost, the cookie domain must be omitted entirely (https://stackoverflow.com/a/1188145)
-        domain: VERCEL_DEPLOYMENT ? ".dub.sh" : undefined,
+        domain: VERCEL_DEPLOYMENT ? ".shopmy.com.au" : undefined,
         secure: VERCEL_DEPLOYMENT,
       },
     },
@@ -47,7 +47,8 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     signIn: async ({ user, account, profile }) => {
-      if (!user.email || (await isBlacklistedEmail(user.email))) {
+      // if (!user.email || (await isBlacklistedEmail(user.email))) {
+      if(!user.email) {
         return false;
       }
       if (account?.provider === "google") {
@@ -71,7 +72,8 @@ export const authOptions: NextAuthOptions = {
       return true;
     },
     jwt: async ({ token, user, trigger, session }) => {
-      if (!token.email || (await isBlacklistedEmail(token.email))) {
+      // if (!token.email || (await isBlacklistedEmail(token.email))) {
+      if(!token.email) {
         return {};
       }
       if (user) {
@@ -114,7 +116,7 @@ export const authOptions: NextAuthOptions = {
           new Date(user.createdAt).getTime() > Date.now() - 10000
         ) {
           sendMarketingMail({
-            subject: "Welcome to Dub.sh!",
+            subject: "Welcome to internal-short.shopmy.com.au!",
             to: email,
             component: <WelcomeEmail />,
           });

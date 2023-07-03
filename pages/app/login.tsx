@@ -32,13 +32,13 @@ export default function Login() {
           <a
             href={
               process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                ? "https://dub.sh"
+                ? "https://internal-short.shopmy.com.au"
                 : "http://localhost:3000"
             }
           >
             <BlurImage
               src="/_static/logo.png"
-              alt="Dub.sh logo"
+              alt="internal-short.shopmy.com.au logo"
               className="h-10 w-10 rounded-full"
               width={20}
               height={20}

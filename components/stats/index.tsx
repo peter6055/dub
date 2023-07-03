@@ -55,7 +55,7 @@ export default function Stats({
       : "";
 
   const { basePath, domain, endpoint } = useMemo(() => {
-    // Project link page, e.g. app.dub.sh/dub/dub.sh/github
+    // Project link page, e.g. internal-short.shopmy.com.au/dub/internal-short.shopmy.com.au/github
     if (slug && domainSlug && key) {
       return {
         basePath: `/${slug}/${domainSlug}/${encodeURIComponent(key)}`,
@@ -63,16 +63,16 @@ export default function Stats({
         endpoint: `/api/links/${encodeURIComponent(key)}/stats`,
       };
 
-      // Generic Dub.sh link page, e.g. app.dub.sh/links/steven
+      // Generic internal-short.shopmy.com.au link page, e.g. internal-short.shopmy.com.au/links/steven
     } else if (key && router.asPath.startsWith("/links")) {
       return {
         basePath: `/links/${encodeURIComponent(key)}`,
-        domain: "dub.sh",
+        domain: "internal-short.shopmy.com.au",
         endpoint: `/api/links/${encodeURIComponent(key)}/stats`,
       };
     }
 
-    // Public stats page, e.g. dub.sh/stats/github, stey.me/stats/weathergpt
+    // Public stats page, e.g. internal-short.shopmy.com.au/stats/github, stey.me/stats/weathergpt
     return {
       basePath: `/stats/${encodeURIComponent(key)}`,
       domain: staticDomain,
@@ -84,9 +84,9 @@ export default function Stats({
     <StatsContext.Provider
       value={{
         basePath, // basePath for the page (e.g. /stats/[key], /links/[key], /[slug]/[domain]/[key])
-        domain: domain!, // domain for the link (e.g. dub.sh, stey.me, etc.)
+        domain: domain!, // domain for the link (e.g. internal-short.shopmy.com.au, stey.me, etc.)
         endpoint, // endpoint for the API (e.g. /api/edge/links/[key]/stats)
-        queryString, // query string for the API (e.g. ?interval=24h&domain=dub.sh, ?interval=24h, etc.)
+        queryString, // query string for the API (e.g. ?interval=24h&domain=internal-short.shopmy.com.au, ?interval=24h, etc.)
         interval, // time interval (e.g. 24h, 7d, 30d, etc.)
         key, // link key (e.g. github, weathergpt, etc.)
       }}

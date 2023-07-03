@@ -33,37 +33,37 @@ export const FADE_IN_ANIMATION_SETTINGS = {
 
 export const HOME_HOSTNAMES = new Set([
   // comment for better diffs
-  "dub.sh",
+  "internal-short.shopmy.com.au",
   "localhost",
   "localhost:3000",
 ]);
 
 export const APP_HOSTNAMES = new Set([
-  "app.dub.sh",
+  "internal-short.shopmy.com.au",
   "app.localhost:3000",
-  "preview.dub.sh",
+  "preview.internal-short.shopmy.com.au",
 ]);
 
 export const DEFAULT_REDIRECTS = {
-  home: "https://dub.sh",
-  dub: "https://dub.sh",
-  signin: "https://app.dub.sh/login",
-  login: "https://app.dub.sh/login",
-  register: "https://app.dub.sh/register",
-  signup: "https://app.dub.sh/register",
-  app: "https://app.dub.sh",
-  dashboard: "https://app.dub.sh",
-  links: "https://app.dub.sh/links",
-  settings: "https://app.dub.sh/settings",
-  welcome: "https://app.dub.sh/welcome",
+  home: "https://internal-short.shopmy.com.au",
+  dub: "https://internal-short.shopmy.com.au",
+  signin: "https://internal-short.shopmy.com.au/login",
+  login: "https://internal-short.shopmy.com.au/login",
+  register: "https://internal-short.shopmy.com.au/register",
+  signup: "https://internal-short.shopmy.com.au/register",
+  app: "https://internal-short.shopmy.com.au",
+  dashboard: "https://internal-short.shopmy.com.au",
+  links: "https://internal-short.shopmy.com.au/links",
+  settings: "https://internal-short.shopmy.com.au/settings",
+  welcome: "https://internal-short.shopmy.com.au/welcome",
   slack: "https://dub.slack.com",
   discord: "https://twitter.com/dubdotsh", // placeholder for now
-  tags: "https://dub.sh/changelog/introducing-tags",
+  tags: "https://internal-short.shopmy.com.au/changelog/introducing-tags",
 };
 
 export const REDIRECT_HEADERS = {
   headers: {
-    "x-powered-by": "Dub.sh - Link management for modern marketing teams",
+    "x-powered-by": "internal-short.shopmy.com.au - Link management for modern marketing teams",
   },
 };
 
@@ -90,7 +90,7 @@ export const SPECIAL_APEX_DOMAINS = {
 export const DEFAULT_LINK_PROPS = {
   key: "github",
   url: "https://github.com/steven-tey/dub",
-  domain: "dub.sh",
+  domain: "internal-short.shopmy.com.au",
   archived: false,
   expiresAt: null,
   password: null,

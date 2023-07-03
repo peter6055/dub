@@ -26,7 +26,7 @@ export default function WelcomeEmail({ name }: { name?: string }): JSX.Element {
                 cssClass="hero"
                 padding="0"
                 align="left"
-                src="https://dub.sh/_static/thumbnail.png"
+                src="https://internal-short.shopmy.com.au/_static/thumbnail.png"
               />
             </MjmlColumn>
           </MjmlSection>
@@ -44,13 +44,13 @@ export default function WelcomeEmail({ name }: { name?: string }): JSX.Element {
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Create a custom{" "}
-                <a href="https://app.dub.sh/links" target="_blank">
-                  Dub.sh short link
+                <a href="https://internal-short.shopmy.com.au/links" target="_blank">
+                  internal-short.shopmy.com.au short link
                 </a>
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Create a new{" "}
-                <a href="https://app.dub.sh/" target="_blank">
+                <a href="https://internal-short.shopmy.com.au/" target="_blank">
                   project
                 </a>{" "}
                 and add your custom domain
