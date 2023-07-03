@@ -37,7 +37,7 @@ const Demo = () => {
               setUrl("");
               // auto copy to clipboard
               navigator.clipboard
-                .writeText(`https://dub.sh/${json.key}`)
+                .writeText(`https://internal-short.shopmy.com.au/${json.key}`)
                 .then(() => {
                   toast.success("Copied shortlink to clipboard!");
                 });

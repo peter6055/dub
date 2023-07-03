@@ -11,7 +11,7 @@ export const validateDomain = async (
     return "Missing domain";
   }
   const validDomain =
-    validDomainRegex.test(domain) && !domain.endsWith(".dub.sh");
+    validDomainRegex.test(domain) && !domain.endsWith(".internal-short.shopmy.com.au");
 
   if (!validDomain) {
     return "Invalid domain";

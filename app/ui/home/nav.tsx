@@ -12,7 +12,7 @@ const navItems = ["pricing", "changelog"];
 const transparentHeaderSegments = new Set(["metatags", "pricing"]);
 
 export default function Nav() {
-  const { domain = "dub.sh" } = useParams() as { domain: string };
+  const { domain = "internal-short.shopmy.com.au" } = useParams() as { domain: string };
 
   const scrolled = useScroll(80);
   const segment = useSelectedLayoutSegment();
@@ -29,14 +29,14 @@ export default function Nav() {
         <div className="flex h-14 items-center justify-between">
           <Link
             href={
-              domain === "dub.sh"
+              domain === "internal-short.shopmy.com.au"
                 ? "/"
-                : `https://dub.sh?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`
+                : `https://internal-short.shopmy.com.au?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`
             }
           >
             <Image
               src="/_static/logotype.svg"
-              alt="Dub.sh logo"
+              alt="internal-short.shopmy.com.au logo"
               width={834}
               height={236}
               className="w-24"
@@ -48,9 +48,9 @@ export default function Nav() {
               <Link
                 key={item}
                 href={
-                  domain === "dub.sh"
+                  domain === "internal-short.shopmy.com.au"
                     ? `/${item}`
-                    : `https://dub.sh/${item}?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`
+                    : `https://internal-short.shopmy.com.au/${item}?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`
                 }
                 className={`rounded-md text-sm font-medium capitalize ${
                   segment === item ? "text-black" : "text-gray-500"

@@ -40,7 +40,7 @@ export default async function handler() {
         }}
       >
         <img
-          src="https://dub.sh/_static/logotype.png"
+          src="https://internal-short.shopmy.com.au/_static/logotype.png"
           style={{
             height: "40px",
             position: "absolute",

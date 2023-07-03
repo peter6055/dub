@@ -2,7 +2,7 @@ import prisma from "#/lib/prisma";
 import { allChangelogPosts, allLegalPosts } from "contentlayer/generated";
 
 export default async function Sitemap() {
-  const domain = "dub.sh";
+  const domain = "internal-short.shopmy.com.au";
 
   const links = await prisma.link.findMany({
     where: {
@@ -24,7 +24,7 @@ export default async function Sitemap() {
       url: `https://${domain}`,
       lastModified: new Date(),
     },
-    ...(domain === "dub.sh"
+    ...(domain === "internal-short.shopmy.com.au"
       ? [
           {
             url: `https://${domain}/pricing`,

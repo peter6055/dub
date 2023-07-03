@@ -19,7 +19,7 @@ export default withLinksAuth(
       }
 
       const response = await getStats({
-        domain: domain || "dub.sh",
+        domain: domain || "internal-short.shopmy.com.au",
         key,
         endpoint,
         interval,

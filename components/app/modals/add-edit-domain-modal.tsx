@@ -211,7 +211,7 @@ function AddEditDomainModal({
                       ? "border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500 pr-10"
                       : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
                   } block w-full rounded-md text-sm focus:outline-none`}
-                  placeholder="dub.sh"
+                  placeholder="internal-short.shopmy.com.au"
                   value={domain}
                   onChange={(e) => {
                     setDomainError(null);
@@ -236,7 +236,7 @@ function AddEditDomainModal({
                   Domain is already in use.{" "}
                   <a
                     className="underline"
-                    href="mailto:steven@dub.sh?subject=My Domain Is Already In Use"
+                    href="mailto:steven@internal-short.shopmy.com.au?subject=My Domain Is Already In Use"
                   >
                     Contact us
                   </a>{" "}

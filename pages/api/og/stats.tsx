@@ -20,7 +20,7 @@ export default async function handler(req: NextRequest) {
     satoshiBold,
   ]);
 
-  const domain = req.nextUrl.searchParams.get("domain") || "dub.sh";
+  const domain = req.nextUrl.searchParams.get("domain") || "internal-short.shopmy.com.au";
   const key = req.nextUrl.searchParams.get("key") || "github";
 
   const data = await getLinkViaEdge(domain, key);
@@ -50,11 +50,11 @@ export default async function handler(req: NextRequest) {
           flexDirection: "column",
           alignItems: "center",
           backgroundColor: "white",
-          backgroundImage: `url(https://dub.sh/_static/background.png)`,
+          backgroundImage: `url(https://internal-short.shopmy.com.au/_static/background.png)`,
         }}
       >
         <img
-          src="https://dub.sh/_static/logo.png"
+          src="https://internal-short.shopmy.com.au/_static/logo.png"
           style={{
             width: "80px",
             height: "80px",

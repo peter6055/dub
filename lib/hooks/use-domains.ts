@@ -22,10 +22,10 @@ export default function useDomains({ domain }: { domain?: string } = {}) {
       ? data
       : ([
           {
-            slug: "dub.sh",
+            slug: "internal-short.shopmy.com.au",
             verified: true,
             primary: true,
-            target: "https://dub.sh",
+            target: "https://internal-short.shopmy.com.au",
             type: "redirect",
           },
         ] as DomainProps[]);

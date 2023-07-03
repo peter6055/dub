@@ -40,7 +40,7 @@ function GoogleOauthModal({
             This allows you to sign in to your Dub account with Google.{" "}
             <a
               className="underline underline-offset-4 transition-colors hover:text-black"
-              href="https://dub.sh/changelog/sign-in-with-google"
+              href="https://internal-short.shopmy.com.au/changelog/sign-in-with-google"
               target="_blank"
               rel="noopener noreferrer"
             >

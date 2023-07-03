@@ -64,7 +64,7 @@ export default function Toggle() {
             content={
               <div className="w-full p-2 md:w-48">
                 {INTERVALS.map(({ display, slug }) =>
-                  !(domain === "dub.sh" && key === "github") &&
+                  !(domain === "internal-short.shopmy.com.au" && key === "github") &&
                   (slug === "all" || slug === "90d") &&
                   (!plan || plan === "free") ? (
                     <Tooltip

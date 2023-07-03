@@ -97,7 +97,7 @@ const computedFields = (type: "changelog" | "legal") => ({
       dateModified: doc.publishedAt,
       description: doc.summary,
       image: doc.image,
-      url: `https://dub.sh/${doc._raw.flattenedPath}`,
+      url: `https://internal-short.shopmy.com.au/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
         name: doc.author,

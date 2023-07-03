@@ -23,7 +23,7 @@ export default function MayRecap({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="Dub.sh May Product Recap" />
+          <Header title="internal-short.shopmy.com.au May Product Recap" />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
               <MjmlImage

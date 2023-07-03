@@ -10,7 +10,7 @@ export default function StatsModal({ params }: { params: { key: string } }) {
         align-middle shadow-xl scrollbar-hide md:rounded-2xl md:border md:border-gray-200"
       >
         <Suspense>
-          <Stats staticDomain="dub.sh" staticKey={params.key} modal />
+          <Stats staticDomain="internal-short.shopmy.com.au" staticKey={params.key} modal />
         </Suspense>
       </div>
     </Modal>

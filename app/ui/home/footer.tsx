@@ -16,12 +16,12 @@ const navigation = {
 };
 
 export default function Footer() {
-  const { domain = "dub.sh" } = useParams() as { domain: string };
+  const { domain = "internal-short.shopmy.com.au" } = useParams() as { domain: string };
 
   const createHref = (href: string) =>
-    domain === "dub.sh"
+    domain === "internal-short.shopmy.com.au"
       ? href
-      : `https://dub.sh${href}?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`;
+      : `https://internal-short.shopmy.com.au${href}?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`;
 
   return (
     <footer className="z-10 border-t border-gray-200 bg-white/50 py-8 backdrop-blur-lg">
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-5 xl:gap-8">
           <div className="space-y-8 xl:col-span-2">
             <Link href={createHref("/")}>
-              <span className="sr-only">Dub.sh Logo</span>
+              <span className="sr-only">internal-short.shopmy.com.au Logo</span>
               <Logo className="h-7 w-7 text-gray-600" />
             </Link>
             <p className="max-w-xs text-sm text-gray-500">

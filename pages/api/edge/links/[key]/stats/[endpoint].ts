@@ -13,11 +13,11 @@ export default async function handler(req: NextRequest) {
     const interval = req.nextUrl.searchParams.get("interval");
     const endpoint = req.nextUrl.searchParams.get("endpoint") as string;
     let domain = req.nextUrl.hostname;
-    if (isHomeHostname(domain)) domain = "dub.sh";
+    if (isHomeHostname(domain)) domain = "internal-short.shopmy.com.au";
 
     let data;
-    // if the link is NOT dub.sh/github (demo link)
-    if (!(domain === "dub.sh" && key === "github")) {
+    // if the link is NOT internal-short.shopmy.com.au/github (demo link)
+    if (!(domain === "internal-short.shopmy.com.au" && key === "github")) {
       data = await getLinkViaEdge(domain, key);
       // check if the link is public
       if (!data?.publicStats) {

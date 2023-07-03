@@ -35,7 +35,7 @@ export default function BigUpdates({ slug }): JSX.Element {
               <MjmlText cssClass="paragraph">Happy Friday! </MjmlText>
               <MjmlText cssClass="paragraph">
                 Today, we are rolling out one of the biggest updates to{" "}
-                <a href="https://dub.sh" target="_blank">
+                <a href="https://internal-short.shopmy.com.au" target="_blank">
                   Dub
                 </a>
                 :
@@ -99,7 +99,7 @@ export default function BigUpdates({ slug }): JSX.Element {
               ) : (
                 <MjmlText cssClass="paragraph">
                   Check out our{" "}
-                  <a href="https://dub.sh/pricing" target="_blank">
+                  <a href="https://internal-short.shopmy.com.au/pricing" target="_blank">
                     new pricing structure
                   </a>
                   .

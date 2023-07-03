@@ -70,7 +70,7 @@ function DeleteAccountModal({
           <h3 className="text-lg font-medium">Delete Account</h3>
           <p className="text-center text-sm text-gray-500">
             Warning: This will permanently delete your account and all your
-            Dub.sh links and their respective stats.
+            internal-short.shopmy.com.au links and their respective stats.
           </p>
         </div>
 

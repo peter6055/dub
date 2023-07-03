@@ -6,15 +6,15 @@ export async function GET() {
     <feed xmlns="http://www.w3.org/2005/Atom">
         <title>Dub</title>
         <subtitle>Changelog</subtitle>
-        <link href="https://dub.sh/atom" rel="self"/>
-        <link href="https://dub.sh/"/>
+        <link href="https://internal-short.shopmy.com.au/atom" rel="self"/>
+        <link href="https://internal-short.shopmy.com.au/"/>
         <updated>${allChangelogPosts[0].publishedAt}</updated>
-        <id>https://dub.sh/</id>${allChangelogPosts.map((post) => {
+        <id>https://internal-short.shopmy.com.au/</id>${allChangelogPosts.map((post) => {
           return `
         <entry>
-            <id>https://dub.sh/changelog/${post.slug}</id>
+            <id>https://internal-short.shopmy.com.au/changelog/${post.slug}</id>
             <title>${post.title}</title>
-            <link href="https://dub.sh/changelog/${post.slug}"/>
+            <link href="https://internal-short.shopmy.com.au/changelog/${post.slug}"/>
             <updated>${post.publishedAt}</updated>
             <author><name>${post.author}</name></author>
         </entry>`;

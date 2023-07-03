@@ -11,7 +11,7 @@ export const metadata = constructMetadata({
   title: "Changelog - Dub",
   description:
     "All the latest updates, improvements, and fixes to Dub - the link management tool for modern marketing teams.",
-  image: "https://dub.sh/api/og/changelog",
+  image: "https://internal-short.shopmy.com.au/api/og/changelog",
 });
 
 export default async function Changelog() {

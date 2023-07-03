@@ -50,7 +50,7 @@ export async function generateStaticParams() {
           where: {
             publicStats: true,
             NOT: {
-              id: "cl9knuml512583yhrbjk0k55yl", // omit `dub.sh/github` since it's already statically generated
+              id: "cl9knuml512583yhrbjk0k55yl", // omit `internal-short.shopmy.com.au/github` since it's already statically generated
             },
           },
           select: {

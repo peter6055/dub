@@ -52,7 +52,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
       return NextResponse.redirect(DEFAULT_REDIRECTS[key]);
     }
     if (await isReservedKey(key)) {
-      return NextResponse.rewrite(new URL(`/dub.sh${path}`, req.url));
+      return NextResponse.rewrite(new URL(`/internal-short.shopmy.com.au${path}`, req.url));
     }
   }
 

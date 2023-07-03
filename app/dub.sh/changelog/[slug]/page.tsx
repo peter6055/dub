@@ -41,7 +41,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://dub.sh/changelog/${slug}`,
+      url: `https://internal-short.shopmy.com.au/changelog/${slug}`,
       images: [
         {
           url: image,
@@ -112,7 +112,7 @@ export default async function ChangelogPost({
           <Author username={post.author} />
           <div className="flex items-center space-x-6">
             <Link
-              href={`https://twitter.com/intent/tweet?text=${post.title}&url=https://dub.sh/changelog/${post.slug}&via=${post.author}`}
+              href={`https://twitter.com/intent/tweet?text=${post.title}&url=https://internal-short.shopmy.com.au/changelog/${post.slug}&via=${post.author}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all hover:scale-110"
@@ -121,7 +121,7 @@ export default async function ChangelogPost({
             </Link>
             <Link
               href={`
-            http://www.linkedin.com/shareArticle?mini=true&url=https://dub.sh/changelog/${post.slug}`}
+            http://www.linkedin.com/shareArticle?mini=true&url=https://internal-short.shopmy.com.au/changelog/${post.slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all hover:scale-110"
@@ -129,7 +129,7 @@ export default async function ChangelogPost({
               <LinkedIn className="h-6 w-6" fill="black" />
             </Link>
             <Link
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://dub.sh/changelog/${post.slug}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://internal-short.shopmy.com.au/changelog/${post.slug}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all hover:scale-110"

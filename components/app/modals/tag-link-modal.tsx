@@ -39,7 +39,7 @@ function TagLinkModal({
   const router = useRouter();
   const { slug } = router.query;
   const [tagging, setTagging] = useState(false);
-  const apexDomain = props?.url ? getApexDomain(props.url) : "dub.sh";
+  const apexDomain = props?.url ? getApexDomain(props.url) : "internal-short.shopmy.com.au";
 
   const { domain, tagId } = props || {};
 
