@@ -18,6 +18,8 @@ export default withLinksAuth(
       domain: string;
     };
 
+    console.log(req.method)
+
     // GET /api/links/:key – get a link
     if (req.method === "GET") {
       return res.status(200).json(link);
