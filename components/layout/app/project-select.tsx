@@ -179,14 +179,14 @@ function ProjectList({
           ) : null}
         </Link>
       ))}
-      <button
-        key="add"
-        onClick={() => setShowAddProjectModal(true)}
-        className="flex w-full cursor-pointer items-center space-x-2 rounded-md p-2 transition-all duration-75 hover:bg-gray-100"
-      >
-        <PlusCircle className="h-7 w-7 text-gray-600" />
-        <span className="block truncate">Add a new project</span>
-      </button>
+      {/*<button*/}
+      {/*  key="add"*/}
+      {/*  onClick={() => setShowAddProjectModal(true)}*/}
+      {/*  className="flex w-full cursor-pointer items-center space-x-2 rounded-md p-2 transition-all duration-75 hover:bg-gray-100"*/}
+      {/*>*/}
+      {/*  <PlusCircle className="h-7 w-7 text-gray-600" />*/}
+      {/*  <span className="block truncate">Add a new project</span>*/}
+      {/*</button>*/}
     </div>
   );
 }
