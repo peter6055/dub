@@ -15,18 +15,18 @@ export const metadata = constructMetadata({});
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Demo />
-      <Logos />
-      {/* @ts-expect-error Async Server Component */}
-      <Globe />
-      {/* @ts-expect-error Async Server Component */}
-      <Stats />
-      <Features />
-      {/* @ts-expect-error Async Server Component */}
-      <Testimonials />
-      {/* @ts-expect-error Async Server Component */}
-      <OSS />
+      {/*<Hero />*/}
+      {/*<Demo />*/}
+      {/*<Logos />*/}
+      {/*/!* @ts-expect-error Async Server Component *!/*/}
+      {/*<Globe />*/}
+      {/*/!* @ts-expect-error Async Server Component *!/*/}
+      {/*<Stats />*/}
+      {/*<Features />*/}
+      {/*/!* @ts-expect-error Async Server Component *!/*/}
+      {/*<Testimonials />*/}
+      {/*/!* @ts-expect-error Async Server Component *!/*/}
+      {/*<OSS />*/}
     </>
   );
 }
