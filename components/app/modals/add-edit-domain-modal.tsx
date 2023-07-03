@@ -115,6 +115,7 @@ function AddEditDomainModal({
         setShowAddEditDomainModal(false);
         toast.success("Successfully deleted domain!");
       } else {
+        console.log(res)
         setDomainError("Something went wrong. Please try again.");
       }
     });
