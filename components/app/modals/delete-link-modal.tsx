@@ -65,9 +65,7 @@ function DeleteLinkModal({
             e.preventDefault();
             setDeleting(true);
             fetch(
-              `/api/links/${encodeURIComponent(props.key)}${
-                slug ? `?slug=${slug}&domain=${domain}` : ""
-              }`,
+              `/api/links/${encodeURIComponent(props.key)}${slug ? `?slug=${slug}&domain=${domain}` : ""}`,
               {
                 method: "DELETE",
                 headers: {
