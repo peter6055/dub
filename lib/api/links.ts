@@ -355,10 +355,10 @@ export async function deleteLink(domain: string, key: string) {
         },
       },
     }),
-    cloudinary.v2.uploader.destroy(`${domain}/${key}`, {
-      invalidate: true,
-    }),
-    redis.del(`${domain}:${key}`),
+    // cloudinary.v2.uploader.destroy(`${domain}/${key}`, {
+    //   invalidate: true,
+    // }),
+    // redis.del(`${domain}:${key}`),
   ]);
 }
 
