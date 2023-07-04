@@ -187,6 +187,7 @@ export const getStats = async ({
           console.log(e);
         }
       }
+      console.log(data)
       return data;
     });
 };
