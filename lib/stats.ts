@@ -117,13 +117,20 @@ export const getStats = async ({
   endpoint: string;
   interval?: string | null;
 }) => {
+  console.log("start tinybird")
   if (!process.env.TINYBIRD_API_KEY) {
     return null;
   }
 
+  console.log("tinybird key pass")
+
+
   if (!VALID_TINYBIRD_ENDPOINTS.has(endpoint)) {
     return null;
   }
+
+  console.log("tinybird endpoint pass")
+
 
   // get all-time clicks count if:
   // 1. endpoint is /clicks
