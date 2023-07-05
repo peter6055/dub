@@ -44,14 +44,19 @@ export const domainExists = async (
       //     },
       //   },
       // ],
-      // change it to only check for the exact match domain
-      slug: apexDomain,
+      slug: {
+        equals: apexDomain, // change it to only check for the exact match domain
+      },
     },
     select: {
       slug: true,
       ...(projectId && { projectId: true }),
     },
   });
+
+  console.log(response)
+
+
   if (response) {
     if (projectId && response.projectId === projectId) {
       return false;
