@@ -225,7 +225,7 @@ function AdvancedSettings({ qrData, setFgColor, showLogo, setShowLogo }) {
                   thumbDimensions="w-5 h-5"
                   thumbTranslate="translate-x-6"
                 />
-                <p className="text-sm text-gray-600">Show internal-short.shopmy.com.au Logo</p>
+                <p className="text-sm text-gray-600">Show SHOPMY Logo</p>
               </div>
             ) : (
               <Tooltip
@@ -246,7 +246,7 @@ function AdvancedSettings({ qrData, setFgColor, showLogo, setShowLogo }) {
                     thumbTranslate="translate-x-6"
                     disabled={true}
                   />
-                  <p className="text-sm text-gray-600">Show internal-short.shopmy.com.au Logo</p>
+                  <p className="text-sm text-gray-600">Show SHOPMY Logo</p>
                 </div>
               </Tooltip>
             )}
