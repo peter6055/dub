@@ -30,18 +30,20 @@ export const domainExists = async (
   const apexDomain = getApexDomain(`https://${domain}`);
   const response = await prisma.domain.findFirst({
     where: {
-      OR: [
-        // if someone tries to add "sub.domain.com" but "domain.com" is already in use
-        // {
-        //   slug: apexDomain,
-        // },
-        // if someone tries to add "domain.com" but "sub.domain.com" is already in use
-        {
-          slug: {
-            endsWith: `.${apexDomain}`,
-          },
-        },
-      ],
+      // OR: [
+      //   // if someone tries to add "sub.domain.com" but "domain.com" is already in use
+      //   {
+      //     slug: apexDomain,
+      //   },
+      //   // if someone tries to add "domain.com" but "sub.domain.com" is already in use
+      //   {
+      //     slug: {
+      //       endsWith: `.${apexDomain}`,
+      //     },
+      //   },
+      // ],
+      // change it to only check for the exact match domain
+      slug: apexDomain,
     },
     select: {
       slug: true,
