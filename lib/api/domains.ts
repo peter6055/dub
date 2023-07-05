@@ -32,9 +32,9 @@ export const domainExists = async (
     where: {
       OR: [
         // if someone tries to add "sub.domain.com" but "domain.com" is already in use
-        {
-          slug: apexDomain,
-        },
+        // {
+        //   slug: apexDomain,
+        // },
         // if someone tries to add "domain.com" but "sub.domain.com" is already in use
         {
           slug: {
