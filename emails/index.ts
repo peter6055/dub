@@ -40,7 +40,7 @@ const sendMail = buildSendMail({
       pass: process.env.EMAIL_SMTP_PASSWORD
     },
   }),
-  defaultFrom: "SHOPMY 员工 <emp_no_reply@shopmy.com.auu>",
+  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_USERNAME.toString() : "",
   configPath: "./mailing.config.json",
 });
 
@@ -57,6 +57,6 @@ export const sendMarketingMail = buildSendMail({
       pass: process.env.EMAIL_SMTP_PASSWORD
     },
   }),
-  defaultFrom: "SHOPMY 员工 <emp_no_reply@shopmy.com.auu>",
+  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_USERNAME.toString() : "",
   configPath: "./mailing.config.json",
 });
