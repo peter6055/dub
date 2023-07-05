@@ -28,6 +28,8 @@ export const domainExists = async (
   projectId?: string | null,
 ) => {
   const apexDomain = getApexDomain(`https://${domain}`);
+
+  console.log(apexDomain)
   const response = await prisma.domain.findFirst({
     where: {
       // OR: [
