@@ -40,7 +40,7 @@ const sendMail = buildSendMail({
       pass: process.env.EMAIL_SMTP_PASSWORD
     },
   }),
-  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_USERNAME.toString() : "",
+  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_FROM.toString() : "",
   configPath: "./mailing.config.json",
 });
 
@@ -57,6 +57,6 @@ export const sendMarketingMail = buildSendMail({
       pass: process.env.EMAIL_SMTP_PASSWORD
     },
   }),
-  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_USERNAME.toString() : "",
+  defaultFrom:  process.env.EMAIL_SMTP_FROM !== undefined ? process.env.EMAIL_SMTP_FROM.toString() : "",
   configPath: "./mailing.config.json",
 });
