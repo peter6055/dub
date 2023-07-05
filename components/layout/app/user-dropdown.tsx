@@ -40,25 +40,25 @@ export default function UserDropdown() {
                 {session?.user?.email}
               </p>
             </div>
-            <button
-              className="w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
-              onClick={() => {
-                setOpeningSupport(true);
-                Crisp.chat.open();
-                Crisp.chat.show();
-              }}
-            >
-              <IconMenu
-                text="Support"
-                icon={
-                  openingSupport ? (
-                    <LoadingCircle />
-                  ) : (
-                    <MessageCircle className="h-4 w-4" />
-                  )
-                }
-              />
-            </button>
+            {/*<button*/}
+            {/*  className="w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"*/}
+            {/*  onClick={() => {*/}
+            {/*    setOpeningSupport(true);*/}
+            {/*    Crisp.chat.open();*/}
+            {/*    Crisp.chat.show();*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <IconMenu*/}
+            {/*    text="Support"*/}
+            {/*    icon={*/}
+            {/*      openingSupport ? (*/}
+            {/*        <LoadingCircle />*/}
+            {/*      ) : (*/}
+            {/*        <MessageCircle className="h-4 w-4" />*/}
+            {/*      )*/}
+            {/*    }*/}
+            {/*  />*/}
+            {/*</button>*/}
             <Link
               href="/settings"
               className="block w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"

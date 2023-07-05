@@ -99,7 +99,7 @@ export default function Stats({
             <Locations />
             <Devices />
             <Referer />
-            <Feedback />
+            {/*<Feedback />*/}
           </div>
         </div>
       </div>
