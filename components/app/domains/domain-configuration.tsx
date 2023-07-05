@@ -81,16 +81,16 @@ export default function DomainConfiguration({
         >
           A Record{!subdomain && " (recommended)"}
         </button>
-        <button
-          onClick={() => setRecordType("CNAME")}
-          className={`${
-            recordType == "CNAME"
-              ? "border-black text-black"
-              : "border-white text-gray-400"
-          } ease border-b-2 pb-1 text-sm transition-all duration-150`}
-        >
-          CNAME Record{subdomain && " (recommended)"}
-        </button>
+        {/*<button*/}
+        {/*  onClick={() => setRecordType("CNAME")}*/}
+        {/*  className={`${*/}
+        {/*    recordType == "CNAME"*/}
+        {/*      ? "border-black text-black"*/}
+        {/*      : "border-white text-gray-400"*/}
+        {/*  } ease border-b-2 pb-1 text-sm transition-all duration-150`}*/}
+        {/*>*/}
+        {/*  CNAME Record{subdomain && " (recommended)"}*/}
+        {/*</button>*/}
       </div>
       <div className="my-3 text-left">
         <p className="my-5 text-sm">
