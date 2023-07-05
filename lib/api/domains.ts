@@ -45,7 +45,7 @@ export const domainExists = async (
       //   },
       // ],
       slug: {
-        equals: apexDomain, // change it to only check for the exact match domain
+        equals: domain, // change it to only check for the exact match domain
       },
     },
     select: {
