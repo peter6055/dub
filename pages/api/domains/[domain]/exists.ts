@@ -9,6 +9,7 @@ export default withUserAuth(async (req, res) => {
   // use the /api/projects/[slug]/domains/[domain]/exists endpoint instead
   if (req.method === "GET") {
     const exists = await domainExists(domain);
+    console.log(exists)
     if (exists) {
       return res.status(200).json(1);
     } else {
