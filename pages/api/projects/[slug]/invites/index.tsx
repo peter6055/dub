@@ -106,6 +106,7 @@ export default withProjectAuth(async (req, res, project) => {
 
       return res.status(200).json({ message: "Invite sent" });
     } catch (error) {
+      console.log(error)
       return res.status(400).end("User already invited.");
     }
 
