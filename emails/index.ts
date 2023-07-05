@@ -44,6 +44,8 @@ const sendMail = buildSendMail({
   configPath: "./mailing.config.json",
 });
 
+
+
 export default sendMail;
 
 export const sendMarketingMail = buildSendMail({

@@ -96,11 +96,13 @@ export default withProjectAuth(async (req, res, project) => {
 
       const url = `${process.env.NEXTAUTH_URL}/api/auth/callback/email?${params}`;
 
-      sendMail({
+      let result = await sendMail({
         subject: "You've been invited to join a project on Dub",
         to: email,
-        component: <ProjectInvite url={url} projectName={project.name} />,
+        component: <ProjectInvite url={url} projectName={project.name}/>,
       });
+
+      console.log(result)
 
       return res.status(200).json({ message: "Invite sent" });
     } catch (error) {
