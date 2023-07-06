@@ -31,7 +31,7 @@ export default function RemarkSection({
   return (
     <div className="border-b border-gray-200 pb-5">
       <div className="flex items-center justify-between">
-        <h2 className="text-sm font-medium text-gray-900">添加备注</h2>
+        <h2 className="text-sm font-medium text-gray-900">Add Remark</h2>
         <Switch fn={() => setEnabled(!enabled)} checked={enabled} />
       </div>
       {enabled && (

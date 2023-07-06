@@ -31,7 +31,7 @@ import useTags from "#/lib/swr/use-tags";
 import TagBadge from "@/components/app/links/tag-badge";
 
 export default function LinkCard({ props }: { props: LinkProps }) {
-  const { key, domain, url, createdAt, archived, tagId } = props;
+  const { key, domain, url, createdAt, archived, tagId, remark } = props;
   const { tags } = useTags();
   const tag = useMemo(() => tags?.find((t) => t.id === tagId), [tags, tagId]);
 
@@ -237,6 +237,7 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                   })}
                 </a>
               )}
+
               <CopyButton url={linkConstructor({ key, domain })} />
               <button
                 onClick={(e) => {
@@ -275,6 +276,9 @@ export default function LinkCard({ props }: { props: LinkProps }) {
             <h3 className="max-w-[200px] truncate text-sm font-medium text-gray-700 md:max-w-md xl:max-w-lg">
               {url}
             </h3>
+            <p>
+              {remark}
+            </p>
           </div>
         </div>
 
