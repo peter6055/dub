@@ -32,6 +32,7 @@ export async function getLinksForProject({
   /*
   TODO: add pagination
   */
+  // @ts-ignore, this has been update on prismas end but not in the types
   return await prisma.link.findMany({
     where: {
       projectId,
