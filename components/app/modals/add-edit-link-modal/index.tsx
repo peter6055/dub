@@ -38,6 +38,7 @@ import { toast } from "sonner";
 import va from "@vercel/analytics";
 import punycode from "punycode/";
 import Button from "#/ui/button";
+import RemarkSection from "./remark-section";
 
 function AddEditLinkModal({
   showAddEditLinkModal,
@@ -407,6 +408,36 @@ function AddEditLinkModal({
                     </div>
                   )}
                 </div>
+                <div className="relative mt-1 flex rounded-md shadow-sm">
+                  <input
+                      name="url"
+                      id={`url-${randomIdx}`}
+                      type="url"
+                      required
+                      placeholder="https://github.com/steven-tey/dub"
+                      value={url}
+                      autoFocus={!key}
+                      autoComplete="off"
+                      onChange={(e) => {
+                        setUrlError(null);
+                        setData({ ...data, url: e.target.value });
+                      }}
+                      className={`${
+                          urlError
+                              ? "border-red-300 pr-10 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
+                              : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
+                      } block w-full rounded-md text-sm focus:outline-none`}
+                      aria-invalid="true"
+                  />
+                  {urlError && (
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <AlertCircleFill
+                            className="h-5 w-5 text-red-500"
+                            aria-hidden="true"
+                        />
+                      </div>
+                  )}
+                </div>
               </div>
               <div>
                 <div className="flex items-center justify-between">
@@ -512,6 +543,7 @@ function AddEditLinkModal({
               </div>
             </div>
 
+
             {/* Divider */}
             <div className="relative py-5">
               <div
@@ -527,11 +559,13 @@ function AddEditLinkModal({
               </div>
             </div>
 
+
             <div className="grid gap-5 px-4 md:px-16">
               <OGSection
                 {...{ props, data, setData }}
                 generatingMetatags={generatingMetatags}
               />
+              <RemarkSection {...{ props, data, setData }} />
               <UTMSection {...{ props, data, setData }} />
               <PasswordSection {...{ props, data, setData }} />
               <ExpirationSection {...{ props, data, setData }} />

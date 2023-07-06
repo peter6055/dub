@@ -24,9 +24,9 @@ async function handler(_req: NextApiRequest, res: NextApiResponse) {
         slug: {
           // exclude domains that belong to us
           notIn: [
-            "internal-short.shopmy.com.au",
-            "stey.me",
-            "steven.yt",
+            "go.shopmy.top",
+            "shopmy.top",
+            "redirect-app.shopmy.top",
             "vercel.fyi",
             "vercel.link",
             "owd.li",

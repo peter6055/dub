@@ -101,6 +101,8 @@ export const DEFAULT_LINK_PROPS = {
   ios: null,
   android: null,
 
+  remark: null,
+
   clicks: 0,
   userId: "",
 
