@@ -38,6 +38,7 @@ import { toast } from "sonner";
 import va from "@vercel/analytics";
 import punycode from "punycode/";
 import Button from "#/ui/button";
+import RemarkSection from "./remark-section";
 
 function AddEditLinkModal({
   showAddEditLinkModal,
@@ -512,6 +513,7 @@ function AddEditLinkModal({
               </div>
             </div>
 
+
             {/* Divider */}
             <div className="relative py-5">
               <div
@@ -527,11 +529,13 @@ function AddEditLinkModal({
               </div>
             </div>
 
+
             <div className="grid gap-5 px-4 md:px-16">
               <OGSection
                 {...{ props, data, setData }}
                 generatingMetatags={generatingMetatags}
               />
+              <RemarkSection {...{ props, data, setData }} />
               <UTMSection {...{ props, data, setData }} />
               <PasswordSection {...{ props, data, setData }} />
               <ExpirationSection {...{ props, data, setData }} />

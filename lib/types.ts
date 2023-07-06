@@ -21,6 +21,8 @@ export interface LinkProps {
   ios: string | null;
   android: string | null;
 
+  remark: string | null;
+
   clicks: number;
   userId?: string | null;
   tagId?: string | null;

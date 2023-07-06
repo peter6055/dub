@@ -177,6 +177,10 @@ model Link {
   ios     String? @db.LongText // custom link for iOS devices
   android String? @db.LongText // custom link for Android devices
 
+  // Remark
+  remark String? @db.VarChar(500)
+
+
   // User who created the link
   user   User?   @relation(fields: [userId], references: [id])
   userId String?

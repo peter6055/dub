@@ -31,7 +31,7 @@ import useTags from "#/lib/swr/use-tags";
 import TagBadge from "@/components/app/links/tag-badge";
 
 export default function LinkCard({ props }: { props: LinkProps }) {
-  const { key, domain, url, createdAt, archived, tagId } = props;
+  const { key, domain, url, createdAt, archived, tagId, remark } = props;
   const { tags } = useTags();
   const tag = useMemo(() => tags?.find((t) => t.id === tagId), [tags, tagId]);
 
@@ -237,6 +237,7 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                   })}
                 </a>
               )}
+
               <CopyButton url={linkConstructor({ key, domain })} />
               <button
                 onClick={(e) => {
@@ -275,6 +276,20 @@ export default function LinkCard({ props }: { props: LinkProps }) {
             <h3 className="max-w-[200px] truncate text-sm font-medium text-gray-700 md:max-w-md xl:max-w-lg">
               {url}
             </h3>
+            {
+                remark!== null &&
+                <>
+                  <h3 className="max-w-[200px] truncate text-sm font-normal text-gray-400 mt-1 text-s md:max-w-md xl:max-w-lg flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                      <path d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z" />
+                      <path d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z" />
+                      <path d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z" />
+                    </svg>
+                    &nbsp;
+                    Name: {remark}
+                  </h3>
+                </>
+            }
           </div>
         </div>
 

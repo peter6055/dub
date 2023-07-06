@@ -179,6 +179,7 @@ export async function addLink(link: LinkProps) {
     proxy,
     ios,
     android,
+    remark,
   } = link;
   const hasPassword = password && password.length > 0 ? true : false;
   const exat = expiresAt ? new Date(expiresAt).getTime() / 1000 : null;
@@ -213,6 +214,7 @@ export async function addLink(link: LinkProps) {
         proxy,
         ios,
         android,
+        remark,
       },
       {
         nx: true,
@@ -263,6 +265,7 @@ export async function editLink(
     proxy,
     ios,
     android,
+    remark,
   } = link;
   const hasPassword = password && password.length > 0 ? true : false;
   const exat = expiresAt ? new Date(expiresAt).getTime() : null;
@@ -314,6 +317,7 @@ export async function editLink(
         proxy,
         ios,
         android,
+        remark
       },
       exat ? { exat } : {},
     ),
